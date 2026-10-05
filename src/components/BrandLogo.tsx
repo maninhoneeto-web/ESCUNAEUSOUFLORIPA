@@ -47,8 +47,15 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
             src={IMAGES.logo}
             alt="Logo Oficial EU SOU FLORIPA - Passeios de Escuna em Florianópolis"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (target.src !== '/assets/images/logo.jpg') {
+                target.src = '/assets/images/logo.jpg';
+              }
+            }}
             className="w-full h-full object-cover"
           />
+
         </div>
       </div>
 

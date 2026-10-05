@@ -302,8 +302,15 @@ export const SalesBot: React.FC = () => {
                   src={IMAGES.logo}
                   alt="Logo EU SOU FLORIPA"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== '/assets/images/logo.jpg') {
+                      target.src = '/assets/images/logo.jpg';
+                    }
+                  }}
                   className="w-full h-full object-cover"
                 />
+
               </div>
               <div>
                 <div className="flex items-center gap-2">

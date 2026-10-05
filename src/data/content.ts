@@ -1,4 +1,9 @@
 import { Tour, FaqItem, BlogPost } from '../types';
+import logoImg from '../assets/images/logo.jpg';
+import heroImg from '../assets/images/hero-schooner.jpg';
+import deckImg from '../assets/images/tour-deck.jpg';
+import coastalImg from '../assets/images/floripa-coastal.jpg';
+import sunsetImg from '../assets/images/sunset-navigation.jpg';
 
 export const COMPANY_INFO = {
   name: 'EU SOU FLORIPA',
@@ -17,19 +22,19 @@ export const COMPANY_INFO = {
   n8nWebhookDefault: 'https://webhook.n8n.cloud/webhook/eu-sou-floripa-leads',
 };
 
-
 export const getWhatsAppLink = (customText?: string) => {
   const text = customText ? encodeURIComponent(customText) : encodeURIComponent(COMPANY_INFO.defaultWhatsAppMessage);
   return `https://wa.me/${COMPANY_INFO.phoneRaw}?text=${text}`;
 };
 
 export const IMAGES = {
-  logo: '/src/assets/images/logo_eu_sou_floripa_1791210334634.jpg',
-  hero: '/src/assets/images/hero_schooner_florianopolis_1791209462365.jpg',
-  deck: '/src/assets/images/tour_schooner_deck_1791209474142.jpg',
-  coastal: '/src/assets/images/floripa_coastal_island_1791209483732.jpg',
-  sunset: '/src/assets/images/sunset_navigation_floripa_1791209494012.jpg',
+  logo: logoImg || '/assets/images/logo.jpg',
+  hero: heroImg || '/assets/images/hero-schooner.jpg',
+  deck: deckImg || '/assets/images/tour-deck.jpg',
+  coastal: coastalImg || '/assets/images/floripa-coastal.jpg',
+  sunset: sunsetImg || '/assets/images/sunset-navigation.jpg',
 };
+
 
 
 export const TOURS: Tour[] = [

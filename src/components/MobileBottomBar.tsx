@@ -14,8 +14,15 @@ export const MobileBottomBar: React.FC = () => {
             src={IMAGES.logo}
             alt="EU SOU FLORIPA"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (target.src !== '/assets/images/logo.jpg') {
+                target.src = '/assets/images/logo.jpg';
+              }
+            }}
             className="w-full h-full object-cover"
           />
+
         </div>
         <div className="flex flex-col">
           <span className="text-[10px] uppercase tracking-wider text-amber-400 font-bold leading-tight">

@@ -39,8 +39,15 @@ export const Hero: React.FC<HeroProps> = ({
                 src={IMAGES.logo}
                 alt="Logo Oficial EU SOU FLORIPA"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (target.src !== '/assets/images/logo.jpg') {
+                    target.src = '/assets/images/logo.jpg';
+                  }
+                }}
                 className="w-full h-full object-cover"
               />
+
             </div>
           </div>
         </div>
