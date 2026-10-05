@@ -1,0 +1,6 @@
+{
+  "name": "EU SOU FLORIPA - Passeios de Escuna em Florianópolis",
+  "description": "Viva Florianópolis pelo mar. Passeios de escuna, barco pirata e experiências náuticas inesquecíveis em Florianópolis - SC. Reserve seu passeio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
